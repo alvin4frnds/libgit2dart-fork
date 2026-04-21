@@ -1,0 +1,11 @@
+* text=auto eol=lf
+
+# Prebuilt native libraries bundled under android/src/main/jniLibs/<ABI>/
+# must stay byte-for-byte binary (any EOL normalisation corrupts the ELF).
+*.so binary
+*.dll binary
+*.dylib binary
+*.a binary
+
+# Compiled ffigen output embeds a BOM-free UTF-8 Dart source; keep LF on all platforms.
+*.dart text eol=lf
